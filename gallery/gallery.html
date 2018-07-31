@@ -16,17 +16,17 @@
 		<div id="gallery"></div>
 	</div>
 	<script>
-		const gal = document.getElementById("gallery");
-		for (let i = 1; i <= 10; i++) {
-			const img_box = document.createElement("a");
-			const num = ("0" + i).slice(-2);
-			img_box.href = `../imgs/gallery/Reliance${num}.jpg`;
+		var gal = document.getElementById("gallery");
+		for (var i = 1; i <= 10; i++) {
+			var img_box = document.createElement("a");
+			var num = ("0" + i).slice(-2);
+			img_box.href = "../imgs/gallery/Reliance{}.jpg".format(num);
 			img_box.target = "_blank";
 			img_box.className = "gal-image-box";
 
-			const img_item = document.createElement("img");
-			img_item.src = `../imgs/gallery_sized/Reliance${num}_1000w.jpg`;
-			img_item.alt = `Reliance Image ${i}`;
+			var img_item = document.createElement("img");
+			img_item.src = "../imgs/gallery_sized/Reliance{}_1000w.jpg".format(num);
+			img_item.alt = "Reliance Image {}".format(i);
 			img_item.className = "gal-image";
 			img_box.appendChild(img_item);
 			
