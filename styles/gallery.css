@@ -10,9 +10,14 @@ body {
 
 header {
 	max-width: 1000px;
-	width: 100%;
+	width: calc(100% - 20px);
 	margin: auto;
 	margin-top: 30px;
+	padding: 0 10px;
+}
+
+header img {
+	width: 100%;
 }
 
 #main-part {
@@ -29,7 +34,3 @@ a.gal-image-box {
 	margin: 20px 0;
 	display: block;
 }
-
-/*img.gal-image {
-	width: 100%;
-}*/

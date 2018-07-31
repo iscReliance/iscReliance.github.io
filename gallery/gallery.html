@@ -9,42 +9,29 @@
 <body>
 	<header>
 		<a href="../index.html">
-			<img src="../imgs/index/logo.png" alt="">
+			<img src="../imgs/index/logo.png" alt="Reliance Main Logo">
 		</a>
 	</header>
 	<div id="main-part">
-		<div id="gallery">
-			<a href="../imgs/gallery/Reliance01.jpg" target="_blank" class="gal-image-box">
-				<img src="../imgs/gallery_sized/Reliance01_1000w.jpg" alt="" class="gal-image">
-			</a>
-			<a href="../imgs/gallery/Reliance02.jpg" target="_blank" class="gal-image-box">
-				<img src="../imgs/gallery_sized/Reliance02_1000w.jpg" alt="" class="gal-image">
-			</a>
-			<a href="../imgs/gallery/Reliance03.jpg" target="_blank" class="gal-image-box">
-				<img src="../imgs/gallery_sized/Reliance03_1000w.jpg" alt="" class="gal-image">
-			</a>
-			<a href="../imgs/gallery/Reliance04.jpg" target="_blank" class="gal-image-box">
-				<img src="../imgs/gallery_sized/Reliance04_1000w.jpg" alt="" class="gal-image">
-			</a>
-			<a href="../imgs/gallery/Reliance05.jpg" target="_blank" class="gal-image-box">
-				<img src="../imgs/gallery_sized/Reliance05_1000w.jpg" alt="" class="gal-image">
-			</a>
-			<a href="../imgs/gallery/Reliance06.jpg" target="_blank" class="gal-image-box">
-				<img src="../imgs/gallery_sized/Reliance06_1000w.jpg" alt="" class="gal-image">
-			</a>
-			<a href="../imgs/gallery/Reliance07.jpg" target="_blank" class="gal-image-box">
-				<img src="../imgs/gallery_sized/Reliance07_1000w.jpg" alt="" class="gal-image">
-			</a>
-			<a href="../imgs/gallery/Reliance08.jpg" target="_blank" class="gal-image-box">
-				<img src="../imgs/gallery_sized/Reliance08_1000w.jpg" alt="" class="gal-image">
-			</a>
-			<a href="../imgs/gallery/Reliance09.jpg" target="_blank" class="gal-image-box">
-				<img src="../imgs/gallery_sized/Reliance09_1000w.jpg" alt="" class="gal-image">
-			</a>
-			<a href="../imgs/gallery/Reliance10.jpg" target="_blank" class="gal-image-box">
-				<img src="../imgs/gallery_sized/Reliance10_1000w.jpg" alt="" class="gal-image">
-			</a>
-		</div>
-	</div>	
+		<div id="gallery"></div>
+	</div>
+	<script>
+		const gal = document.getElementById("gallery");
+		for (let i = 1; i <= 10; i++) {
+			const img_box = document.createElement("a");
+			const num = ("0" + i).slice(-2);
+			img_box.href = `../imgs/gallery/Reliance${num}.jpg`;
+			img_box.target = "_blank";
+			img_box.className = "gal-image-box";
+
+			const img_item = document.createElement("img");
+			img_item.src = `../imgs/gallery_sized/Reliance${num}_1000w.jpg`;
+			img_item.alt = `Reliance Image ${i}`;
+			img_item.className = "gal-image";
+			img_box.appendChild(img_item);
+			
+			gal.appendChild(img_box);
+		}
+	</script>
 </body>
 </html>

@@ -9,13 +9,14 @@ body {
 
 header {
 	max-width: 1000px;
-	width: 100%;
+	width: calc(100% - 20px);
 	margin: auto;
+	margin-top: 50px;
+	padding: 0 10px;
 }
 
 header img {
 	width: 100%;
-	margin-top: 50px;
 }
 
 #main-part {
@@ -44,7 +45,7 @@ header img {
 	
 	color: white;
 	font-family: Digital;
-	font-size: 48px;
+	font-size: 40px;
 	letter-spacing: 5px;
 	text-decoration: none;
 }
@@ -63,7 +64,7 @@ header img {
 #author-box img {
 	max-width: 600px;
 	width: 100%;
-	margin-top: 115px;
+	margin-top: 140px;
 	float: right;
 	display: block;
 }
