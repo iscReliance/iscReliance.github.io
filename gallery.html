@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reliance Gallery</title>
+	<link rel="stylesheet" type="text/css" href="../styles/gallery.css">
+</head>
+<body>
+	<header>
+		<a href="../index.html">
+			<img src="../imgs/index/logo.png" alt="Reliance Main Logo">
+		</a>
+	</header>
+	<div id="main-part">
+		<div id="gallery"></div>
+	</div>
+	<script>
+		var gal = document.getElementById("gallery");
+		for (var i = 1; i <= 12; i++) {
+			var img_box = document.createElement("a");
+			var num = ("0" + i).slice(-2);
+			img_box.href = "../imgs/gallery/Reliance" + num + ".jpg";
+			img_box.target = "_blank";
+			img_box.className = "gal-image-box";
+
+			var img_item = document.createElement("img");
+			img_item.src = "../imgs/gallery_sized/Reliance" + num + "_1000w.jpg";
+			img_item.alt = "Reliance Image " + i;
+			img_item.className = "gal-image";
+			img_box.appendChild(img_item);
+			
+			gal.appendChild(img_box);
+		}
+	</script>
+</body>
+</html>
